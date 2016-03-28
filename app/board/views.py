@@ -43,7 +43,7 @@ class ThreadView(ListView):
 
     def get_queryset(self):
         self.thread = get_object_or_404(Thread.objects, pk=self.kwargs['thread'])
-        return Message.objects.all().filter(thread=self.thread)
+        return Message.objects.filter(thread=self.thread)
 
     def get_context_data(self, **kwargs):
         context = ListView.get_context_data(self, **kwargs)
