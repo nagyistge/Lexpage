@@ -7,7 +7,7 @@
 {% block content %}
 
     <h3>{{ thread.title }}</h3>
-   <a name="last"></a>
+
     {% if thread.blogboardlink %}
         <p>Cette discussion est en relation avec le billet suivant : </p>    
         <div class="well">
@@ -16,7 +16,7 @@
     {% endif %}
 
     <a name="reply"></a>
-
+    <a name="last"></a>
     {% if user.is_authenticated %}
         <form method="post" class="form" action="{% url 'board_thread_reply' thread.pk %}">
         {% csrf_token %}
