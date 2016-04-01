@@ -58,7 +58,7 @@
 
 
     <div class="board-messagelist">
-    {% for message in message_list.reverse %}
+    {% for message in message_list|slice:"::-1" %}
 
         <a name="msg{{message.pk}}"></a>
 
