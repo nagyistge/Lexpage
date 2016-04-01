@@ -7,7 +7,7 @@
 {% block content %}
 
     <h3>{{ thread.title }}</h3>
-
+   <a name="last"></a>
     {% if thread.blogboardlink %}
         <p>Cette discussion est en relation avec le billet suivant : </p>    
         <div class="well">
@@ -56,7 +56,6 @@
     <p class="alert alert-info">L'ordre des messages a été inversé par cohérence avec les autres listings du site et les flux d'activité
     de sites tels que Facebook, Twitter, LinkedIn. Les messages les plus récents sont dorénavant en tête de liste.</p>
 
-    <a name="last"></a>
 
     <div class="board-messagelist">
     {% for message in message_list.reverse %}
